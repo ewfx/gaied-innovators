@@ -21,7 +21,7 @@ Also, minimizing the gate keeping activities.
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
+📹 [Video Demo](#) (https://github.com/ewfx/gaied-innovators/blob/main/artifacts/demo/Demo_Innovators.mov)  
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
