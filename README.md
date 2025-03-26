@@ -25,6 +25,13 @@ Also, minimizing the gate keeping activities.
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
+Sample Email:
+![Sample Input Email Request](image.png)
+
+Execution Log:
+![Program execution log](image-1.png)
+
+![Sample output json](image-2.png)
 
 ## 💡 Inspiration
 This project is inspired by the need to automate the processing and classification of large volumes of emails. Many organizations handle a high volume of emails daily, and manually sorting and categorizing them can be both time-consuming and prone to errors. By utilizing AI, this project seeks to streamline the process, enhancing both efficiency and accuracy.
@@ -131,7 +138,7 @@ Below is an overview of the core technologies used in the project:
 
 ---
 
-#### **2. OpenAI GPT-4 (ChatGPT) - Natural Language Processing (NLP)**
+#### **2. OpenAI GPT-4  (ChatGPT) - Natural Language Processing (NLP)**
 
 - **Role**: The **OpenAI GPT-4 (ChatGPT)** model, specifically the **gpt-4o-mini** variant, is the engine behind the **natural language understanding** and **text classification** within the system.
 - **Why GPT-4 (ChatGPT)?**:
