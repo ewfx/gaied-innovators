@@ -13,7 +13,11 @@
 
 ---
 ## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+Many organizations receive numerous emails daily, and manually sorting and categorizing them can be time-consuming and error-prone.
+LLM-MailOps aims to automate email classification and data extraction using GEN AI (LLMs), improving efficiency, accuracy and turnaround time. 
+Also, minimizing the gate keeping activities.
+
+
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
@@ -23,7 +27,7 @@ A brief overview of your project and its purpose. Mention which problem statemen
 ![Screenshot 1](link-to-image)
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+This project is inspired by the need to automate the processing and classification of large volumes of emails. Many organizations handle a high volume of emails daily, and manually sorting and categorizing them can be both time-consuming and prone to errors. By utilizing AI, this project seeks to streamline the process, enhancing both efficiency and accuracy.
 
 ## ⚙️ What It Does
 Explain the key features and functionalities of your project.
