@@ -33,7 +33,6 @@ This project is inspired by the need to automate the processing and classificati
 This solution utilizes a Python program powered by the ChatGPT LLM model, which is based on predefined prompts. It reads the contents of emails and attachments, comprehends the context within the lending domain, and uses this understanding to classify emails. Additionally, it extracts key data attributes from both the emails and their attachments.
 
 ## 🛠️ How We Built It
-### **How We Built It**
 
 We built this solution using a combination of **Python**, **ChatGPT**, and several **open-source packages** to handle email and file processing effectively. Here’s a breakdown of the components involved in building the solution:
 
@@ -72,7 +71,34 @@ We built this solution using a combination of **Python**, **ChatGPT**, and sever
 Through the use of **Python**, **ChatGPT**, and various open-source libraries, we’ve created a powerful and scalable solution that automates the email classification process in the **lending domain**, streamlining workflows and enhancing overall efficiency.
 
 ## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+Implementing an effective email classification system using Large Language Models (LLMs) comes with several challenges that need to be addressed to ensure accurate and efficient processing. Below are some of the key challenges faced during the development and how they were tackled:
+
+1. **Identifying a Model That Classifies Requests Consistently**
+Challenge: Identifying a model capable of consistently classifying requests across a wide range of email content was a major challenge. LLMs, such as ChatGPT, require carefully crafted prompts to understand the problem context in a generic yet business-specific manner.
+
+Solution: We explored multiple predefined prompts to guide the model in classifying email content accurately. The prompts were tailored to suit the lending domain while keeping the language generic enough to handle various types of email requests. This iterative process of prompt fine-tuning ensured that the model understood and classified the requests correctly across different scenarios.
+
+2. **Handling Vague or Ambiguous Emails**
+Challenge: Many emails we processed were not straightforward, and users often expressed their requests in vague or unclear ways. For instance, an email might mention a general inquiry about "loan status" without providing enough context.
+
+Solution: LLMs helped in understanding user intent and the underlying service request even when the email content was not clear. The language model was able to infer the correct request type (e.g., loan inquiry, payment dispute) based on subtle clues in the email body. This capability made it possible to accurately classify emails with ambiguous or vague content, ensuring that requests were processed appropriately.
+
+3. **Processing Large Files with LLMs**
+Challenge: The process of extracting and classifying information from large email attachments or lengthy email threads using LLMs could be time-consuming, especially when dealing with a high volume of incoming requests.
+
+Solution: To address the performance bottleneck caused by large file processing, we adopted asynchronous processing. This approach enabled the system to process incoming email requests in parallel, significantly improving the throughput and reducing the overall time taken for processing. Asynchronous processing allowed us to handle multiple emails and attachments concurrently without causing delays in response time.
+
+4. **Dealing with Duplicate Email Requests**
+Challenge: Email requests from users often contained duplicate or repeated submissions. This redundancy could lead to unnecessary processing and potential confusion.
+
+Solution: To prevent redundant processing and ensure that each unique request is handled efficiently, we implemented a duplicate request detection mechanism. The system checks incoming emails against previously processed requests, identifying duplicates based on key metadata (such as subject, timestamp, and user details). Duplicates are filtered out before processing, ensuring that each request is handled only once and reducing unnecessary load on the system.
+
+5. **Continuous Model Improvement and Fine-Tuning**
+Challenge: The model's ability to classify emails accurately depends on continuous improvement and fine-tuning, as the nature of email requests can evolve over time.
+
+Solution: We have developed a feedback loop where the system learns from user interactions and manual corrections to refine its classification accuracy. By periodically retraining the model with new email samples and updated data, we ensure the system remains effective and accurate in handling various types of email requests.
+
+
 
 ## 🏃 How to Run
 1. Clone the repository  
