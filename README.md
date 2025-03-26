@@ -103,23 +103,78 @@ Solution: We have developed a feedback loop where the system learns from user in
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/ewfx/gaied-innovators
    ```
 2. Install dependencies  
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   !pip install openai langchain_openai pdfplumber pytesseract pdf2image python-docx fpdf langchain
    ```
 3. Run the project  
    ```sh
-   npm start  # or python app.py
+   python LLM-MailOps.py
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+### **Tech Stack Overview**
+
+Below is an overview of the core technologies used in the project:
+
+---
+
+#### **1. Python - Core Language for Business Logic**
+
+- **Role**: Python serves as the backbone of the solution, handling the **business logic** and integrating various components of the system. 
+- **Why Python?**:
+   - **Simplicity and Flexibility**: Python is chosen for its simplicity and readability, making it easier to write and maintain the codebase. It allows rapid development and quick iteration on the business logic.
+   - **Extensive Libraries and Frameworks**: Python’s vast ecosystem of libraries and frameworks enables efficient file handling (email parsing, PDF extraction, etc.), integration with AI models, and real-time data processing. Libraries like `email`, `PyPDF2`, `python-docx`, and `pytesseract` help manage different email formats and attachments, while frameworks such as `asyncio` enable asynchronous processing for performance optimization.
+   - **Integration with OpenAI API**: Python’s seamless integration with external APIs, like OpenAI, allows us to easily incorporate **ChatGPT** for NLP tasks. The **OpenAI Python SDK** simplifies interactions with the API, enabling the system to leverage the power of GPT-4 for tasks like email classification and data extraction.
+
+---
+
+#### **2. OpenAI GPT-4 (ChatGPT) - Natural Language Processing (NLP)**
+
+- **Role**: The **OpenAI GPT-4 (ChatGPT)** model, specifically the **gpt-4o-mini** variant, is the engine behind the **natural language understanding** and **text classification** within the system.
+- **Why GPT-4 (ChatGPT)?**:
+   - **Advanced NLP Capabilities**: GPT-4 is a cutting-edge language model capable of understanding and generating human-like text. It is leveraged to classify emails, extract relevant data attributes, and infer the context of the email content in the **lending domain**.
+   - **Predefined Prompts**: The model is used with predefined prompts that guide it to interpret and classify emails based on their content, ensuring alignment with business requirements. This is crucial for **automating email classification** and understanding user intent in different types of requests (e.g., loan applications, payment inquiries).
+   - **Data Extraction**: Beyond classification, GPT-4 helps extract important data attributes such as customer details, loan amounts, transaction dates, and other critical information from both the email body and attachments. This allows the system to perform **automated data extraction** without requiring manual intervention.
+   - **Language Flexibility**: The power of GPT-4 lies in its ability to handle a wide range of natural language expressions, making it suitable for processing **ambiguous, vague, or unstructured** email requests. It can infer intent and adapt to varying email structures, ensuring high accuracy even in challenging scenarios.
+   
+---
+
+#### **3. Open-Source Packages for File Processing**
+
+In addition to Python and GPT-4, we utilize several **open-source libraries** to process and extract data from different types of email attachments. These tools ensure that the system can handle a variety of formats and accurately extract relevant data.
+
+- **`email` Library**: Used for parsing `.eml` files to extract the email body, headers, and attachments.
+- **`PyPDF2` & `pdfplumber`**: These libraries are used to extract text from **PDF** attachments, such as loan contracts, invoices, and other financial documents.
+- **`python-docx`**: This library is used for extracting text from **Word documents (.docx)** attached to emails.
+- **`Pytesseract` (OCR)**: OCR technology is utilized to extract text from image attachments (e.g., JPG, PNG), making it possible to process scanned documents, screenshots, or other non-text content.
+  
+---
+
+#### **4. Asynchronous Processing for Performance Optimization**
+
+- **Role**: Asynchronous processing is used to manage the high volume of incoming email requests and their attachments efficiently.
+- **Why Asynchronous Processing?**:
+   - **Parallel Processing**: To handle large files and email attachments that may take longer to process, we adopted an **asynchronous model** to process incoming requests concurrently. This reduces wait times and enhances the system’s ability to scale.
+   - **Efficiency**: By processing multiple email requests in parallel, the system can handle **bulk email processing** more efficiently, minimizing delays in response time.
+  
+---
+
+### **How These Technologies Work Together**
+
+1. **Email Parsing**: The Python `email` library processes incoming `.eml` files, extracting the subject, body, and attachments.
+2. **File Handling and Data Extraction**: Open-source libraries like `PyPDF2`, `python-docx`, and `pytesseract` are used to extract text from different file types attached to the email, such as PDF, Word, and images.
+3. **Natural Language Understanding**: The content, including both the email body and attachments, is passed through **ChatGPT (GPT-4)** for classification and data extraction. The model uses **predefined prompts** to classify the email into categories (e.g., loan inquiry, payment request) and extract relevant details.
+4. **Asynchronous Processing**: For large volumes of requests and files, the system uses asynchronous processing to ensure that requests are handled concurrently, improving processing speed and performance.
+5. **Duplicate Detection**: A mechanism is in place to detect and filter out duplicate requests, ensuring that each unique request is processed only once.
+
+---
+
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- **Ashok Nagabandi**
+- **Bibaswan Padhy** 
+- **Jayprakash Mahankali** 
+- **Prathap Reddy Chitam**
