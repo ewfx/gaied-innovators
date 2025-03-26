@@ -121,7 +121,9 @@ Solution: We have developed a feedback loop where the system learns from user in
    python LLM-MailOps.py
    ```
 
-## 🏗️ Tech Stack
+## 🏗️ Tech Stack & High-level architecture diagram
+![High-level architecture diagram](LLM-MailOps.PNG)
+
 ### **Tech Stack Overview**
 
 Below is an overview of the core technologies used in the project:
