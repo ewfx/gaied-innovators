@@ -124,6 +124,7 @@ Solution: We have developed a feedback loop where the system learns from user in
 ## 🏗️ Tech Stack & High-level architecture diagram
 ![High-level architecture diagram](LLM-MailOps.PNG)
 
+For more information, please refer to this artifact: https://github.com/ewfx/gaied-innovators/blob/main/artifacts/arch/Technology%20Hackathon-LLM-MailOps.pptx
 ### **Tech Stack Overview**
 
 Below is an overview of the core technologies used in the project:
